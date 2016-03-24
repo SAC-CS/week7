@@ -1,0 +1,61 @@
+import java.util.Scanner; 
+import java.util.Random; 
+import javax.swing.JOptionPane;	
+
+	
+
+	public class Guessnumber 
+	{ 
+	public static void main(String[] args) 
+	{ 
+	    String personPlay;  
+	    String computerPlay = ""; 
+	    int computerInt; 
+	    String response; 
+	
+
+	
+
+	    Scanner scan = new Scanner(System.in); 
+	    Random generator = new Random(); 
+	
+
+	    String number = JOptionPane.showInputDialog("Let's play guess a number");
+     
+
+   
+
+	    
+	    personPlay = Integer.parseInt(number);
+	
+
+	
+
+	    
+	    System.out.println("Computer play is: " + computerPlay); 
+	
+
+	    
+	    computerInt = generator.nextInt(10)+1; 
+	
+
+	    
+	
+
+	
+
+	    if (personPlay == computerPlay) 
+	    String message1 = String.format("It's a correct number");
+	        JOptionPane.showMessageDialog(null, message1); 
+	     if (personPlay > computerPlay) 
+	       String message2 = String.format("too big!!!");
+	          JOptionPane.showMessageDialog(null, message2); 
+	     if (personPlay < computerPlay) 
+	        String message3 = String.format("too small!!!");
+	          JOptionPane.showMessageDialog(null, message3);
+	         
+	    
+	   
+	}
+	}
+
